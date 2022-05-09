@@ -19,13 +19,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Link from "next/link";
 import Image from "next/image";
 import ImageLoader from "./../imageLoader";
-import mcLogo from "/logo.png";
-
-
 import { routes } from "../data/routes";
-//import { Image } from 'next/image';
 
-function ElevationScroll(props:any) {
+function ElevationScroll(props: any) {
   const { children } = props;
 
   const trigger = useScrollTrigger({
@@ -41,12 +37,12 @@ function ElevationScroll(props:any) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: `5em`,
+    marginBottom: `2em`,
     [theme.breakpoints.down("md")]: {
       marginBottom: "4em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginBottom: "2em",
+      marginBottom: "5em",
     },
   },
   logo: {
@@ -64,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: `50px`,
     width: `50px`,
-    color: `#fff`,
+    color: `red`,
     [theme.breakpoints.down("xs")]: {
       height: `40px`,
       width: `40px`,
@@ -100,9 +96,7 @@ const Menu = () => {
       <Grid container justify="flex-end" spacing={4}>
         {path.map(({ name, link }) => (
           <Grid item key={link}>
-              <Typography>
-                {name}
-              </Typography>
+            <Typography>{name}</Typography>
           </Grid>
         ))}
       </Grid>
@@ -131,16 +125,14 @@ const Menu = () => {
               }}
             >
               <ListItemText disableTypography>
-                  <Typography
-                    style={{
-                      color:
-                        router.pathname === link
-                          ? "primary"
-                          : "rgb(107 107 107)",
-                    }}
-                  >
-                    {name}
-                  </Typography>
+                <Typography
+                  style={{
+                    color:
+                      router.pathname === link ? "primary" : "rgb(107 107 107)",
+                  }}
+                >
+                  {name}
+                </Typography>
               </ListItemText>
             </ListItem>
           ))}
@@ -164,13 +156,12 @@ const Menu = () => {
             style={{
               maxWidth: "1280px",
               margin: "0 auto",
-                width: "100%",
-              backgroundColor:"#F1F5F8",
-                color: "black",
-              borderBottom:"2px solid #F1F5F8",
-              padding: matches ? "0 12px" : "16px",
+              width: "100%",
+              backgroundColor: "#fff",
+              color: "black",
+              padding: matches ? "0 8px" : "16px",
             }}
-                  >
+          >
             <Link href={`/`}>
               <a>
                 <Image
@@ -179,17 +170,20 @@ const Menu = () => {
                   src="/logo.png"
                   alt="Euka Logo"
                   width="100%"
-                  height="50"
+                  height="40"
                 />
               </a>
             </Link>
             {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
-      </ElevationScroll>
+          </ElevationScroll>
+
+
 
       <div className={classes.toolbarMargin} />
-    </>
+          
+      </>
   );
 };
 export default Menu;

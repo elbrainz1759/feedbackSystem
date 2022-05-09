@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Footer from './../components/footer';
 import Header from './../components/header';
 import Menu from './../components/menu';
+import SubMenu from './../components/subMenu';
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,8 @@ const Home: NextPage = () => {
 
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+         <SubMenu />
+     <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
