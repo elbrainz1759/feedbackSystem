@@ -9,7 +9,6 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Powered by{' '}
                 <span className={styles.logo}>
                     <Image src="/logo.png" alt="Vercel Logo" width={72} height={30} />
                 </span>
