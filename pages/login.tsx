@@ -2,23 +2,22 @@ import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import Footer from "./../components/footer";
 import Header from "./../components/header";
-import Menu from "./../components/menu";
-import SubMenu from "./../components/subMenu";
+import LoginForm from './../components/forms/loginForm';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Header />
-      <Menu />
+          <Header />
+          <ToastContainer />
 
       <main className={styles.main}>
-        <SubMenu />
-        <h4 className={styles.title}>
-          Welcome to MCN Logistics Feedback{" "}
-          <a href="https://nextjs.org">System</a>
-        </h4>
+          <div className={styles.grid}>
+        <LoginForm />
+          </div>
       </main>
-
       <Footer />
     </div>
   );

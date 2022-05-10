@@ -35,16 +35,7 @@ function ElevationScroll(props: any) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: `2em`,
-    [theme.breakpoints.down("md")]: {
-      marginBottom: "4em",
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: "5em",
-    },
-  },
+
   logo: {
     color: "black",
     width: "max-content",
@@ -93,7 +84,7 @@ const Menu = () => {
 
   const tabs = (
     <>
-      <Grid container justify="flex-end" spacing={4}>
+      <Grid container justifyContent="flex-end" spacing={4}>
         {path.map(({ name, link }) => (
           <Grid item key={link}>
             <Typography>{name}</Typography>
@@ -113,7 +104,6 @@ const Menu = () => {
         classes={{ paper: classes.drawer }}
         anchor="right"
       >
-        <div className={classes.toolbarMargin} />
         <List disablePadding>
           {path.map(({ name, link }) => (
             <ListItem
@@ -181,7 +171,6 @@ const Menu = () => {
 
 
 
-      <div className={classes.toolbarMargin} />
           
       </>
   );

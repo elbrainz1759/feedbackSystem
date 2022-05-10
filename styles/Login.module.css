@@ -1,0 +1,19 @@
+.container{
+  padding: 50px;
+  max-width:50%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.form{
+    text-align: center;
+}
+.btn{
+    height: "55px";
+    width: "100%";
+    margin-top: "5px";
+    background-color: "#20418d";
+    color: "white";
+    cursor: "pointer";
+}

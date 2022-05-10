@@ -12,7 +12,7 @@ const SubMenu = () => {
   const path = subRoutes;
   const tabs = (
     <>
-      <Grid container justify="flex-end" spacing={4} style={{width:"100%"}}>
+      <Grid container justifyContent="flex-end" spacing={4} style={{width:"100%"}}>
         {path.map(({ name, link }) => (
           <Grid item key={link}>
             <Typography>{name}</Typography>
@@ -25,7 +25,7 @@ const SubMenu = () => {
   return (
     <div style={{
         width: "100%",
-        backgroundColor: "#00A4CCFF",
+        backgroundColor: "#e3242b",
         color: "white",
         borderBottom: "2px solid #F1F5F8",
         padding: "16px 0 16px 0",
