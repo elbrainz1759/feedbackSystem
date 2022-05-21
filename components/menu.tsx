@@ -140,7 +140,7 @@ const Menu = () => {
   return (
     <>
       <ElevationScroll>
-        <AppBar>
+        <AppBar style={{backgroundColor: "#fff"}}>
           <Toolbar
             disableGutters
             style={{
